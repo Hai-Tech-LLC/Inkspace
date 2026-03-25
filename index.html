@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: reveal 1s forwards;
+        }
+        @keyframes reveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <script src="path/to/fluid-orbit.js"></script>
+    <script>
+        // Initialize the Fluid Orbit particle system
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Fluid Orbit parameters
+        let particles = []; // Create your particles array
+
+        // Function to create and animate particles
+        function createParticles() {
+            // Logic for creating particles with smooth orbital motion and wobble effects
+            // Call update function for each animation frame
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            createParticles(); // Call your particle creation function here
+            requestAnimationFrame(animate);
+        }
+
+        // Start the animation
+        animate();
+    </script>
+</body>
+</html>
